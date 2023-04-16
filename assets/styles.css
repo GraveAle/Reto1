@@ -1,0 +1,11 @@
+.flex-container{
+    display: flex;
+    background: bisque;
+    
+}
+
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+
