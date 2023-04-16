@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/Reto1/app.js"></script>
+    <title>Reto logica promacion</title>
+</head>
+<body>
+
+    <div>
+        <textarea id="texto" cols="30" rows="10"></textarea>
+        <button onclick='encriptarTexto()'>Encriptar</button>
+    </div>
+    
+
+</body>
+
+<script>
+
+    function encriptarTexto (){
+        var valor = document.getElementById('texto').value;
+        valor = valor.toLowerCase().split('');
+        
+        for (i = 0; i < valor.length; i ++){
+        // var encriptado = [];
+        if (valor[i] == 'a') {
+        valor.splice([i],1, 'ai');
+        }
+        
+        if (valor[i] == 'e'){
+        valor.splice([i],1, 'enter');
+        }
+        
+        if (valor[i] == 'i'){
+        valor.splice([i],1, 'imes');
+        }
+        
+        if (valor[i] == 'o'){
+        valor.splice([i],1, 'ober');
+        }
+        
+        if (valor[i] == 'u'){
+        valor.splice([i],1, 'ufat');
+        }
+        console.log(valor);
+    }
+}
+
+
+
+
+
+
+</script>
+</html>
