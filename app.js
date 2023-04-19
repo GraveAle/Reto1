@@ -30,9 +30,8 @@ function encriptarTexto (){
     }
     
         valor = valor.join('');
-        mostrarTexto(valor);
-
-        limpiarTextoArea();
+        mostrarTexto('encriptado' ,valor);
+        limpiarTextoArea('texto');
 }
 
 //Funcion para decodificar texto
@@ -47,18 +46,37 @@ function desencriptarTexto (){
             decodificar.splice([i],1);
             decodificar.splice([i],1, 'a')
         }
+        if (decodificar[i] == 'e'){
+            decodificar.splice([i],1);
+            decodificar.splice([i],4, 'e')
+        }
+        if (decodificar[i] == 'i'){
+            decodificar.splice([i],1);
+            decodificar.splice([i],3, 'i')
+        }
+        if (decodificar[i] == 'o'){
+            decodificar.splice([i],1);
+            decodificar.splice([i],3, 'o')
+        }
+        if (decodificar[i] == 'u'){
+            decodificar.splice([i],1);
+            decodificar.splice([i],3, 'u')
+        }
     }
+        
+        decodificar = decodificar.join('');
+        mostrarTexto('texto' , decodificar);
+        limpiarTextoArea('encriptado');
+    
+}
 
-    console.log(decodificar);
-
+//Mostrar texto codificado/decodificado
+function mostrarTexto(textarea,txt){
+    document.getElementById(textarea).innerHTML = txt;
 }
 
 // Funciones para limpiar pantalla
-function mostrarTexto(txt){
-    document.getElementById('encriptado').innerHTML = txt;
-}
-
-function limpiarTextoArea (){
-    document.getElementById('texto').value = "";
+function limpiarTextoArea (limpia){
+    document.getElementById(limpia).value = "";
 }
 
