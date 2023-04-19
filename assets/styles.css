@@ -1,12 +1,4 @@
-header {
-    display: flex;
-    min-height: 70px;
-    background-color: #009929;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
-
-}
+/*Header*/
 
 nav li {
     display: inline;
@@ -21,13 +13,51 @@ nav a {
     text-decoration: none;
 }
 
-
-
-
-.flex-container{
+header {
     display: flex;
-    background: bisque;
-    
+    min-height: 70px;
+    background-color: #009929;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+
+}
+
+
+
+/* Text areas y butones */
+
+.contenedor{
+    width: 940px;
+    margin: 0 auto;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor div{
+    display: inline-block;
+}
+
+textarea{
+    font-family: Courier, sans-serif;
+    height: 6em;
+    width: 400px;
+}
+
+.izq{
+    width: 40%;
+}
+
+.center{
+    margin: 0 auto;
+    vertical-align: top;
+    width: auto;
+}
+
+.der{
+    width: 40%;
 }
 
 .box{
