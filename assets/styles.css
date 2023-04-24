@@ -13,6 +13,11 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover{
+    color: #8f0065;
+    text-decoration: underline;
+}
+
 header {
     display: flex;
     min-height: 70px;
@@ -23,9 +28,14 @@ header {
 
 }
 
+/*Main*/
+
+main{
+    background-color: #ade0b3;
+}
 
 
-/* Text areas y butones */
+/* Text area*/
 
 .contenedor{
     width: 940px;
@@ -34,16 +44,31 @@ header {
 
     display: flex;
     justify-content: center;
+    
 }
 
 .contenedor div{
     display: inline-block;
+    
 }
 
 textarea{
     font-family: Courier, sans-serif;
     height: 6em;
     width: 400px;
+    resize: vertical;
+    
+    border-width: 2.54px;
+    border-color: #1ca381;
+    border-radius: 25px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+textarea:hover{
+    border-color: #1f6b28;
+    border-style: dashed;
 }
 
 .izq{
@@ -63,5 +88,13 @@ textarea{
 .box{
     display: flex;
     justify-content: space-around;
+}
+
+/* Pie de pagina*/
+
+footer{
+    background-color: #009929;
+    text-align: center;
+    padding: 30px;
 }
 
