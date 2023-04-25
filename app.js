@@ -1,3 +1,5 @@
+//Variables globales
+
 
 
 //Funcion para encriptar texto

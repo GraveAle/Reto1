@@ -55,7 +55,7 @@ main{
 textarea{
     font-family: Courier, sans-serif;
     height: 6em;
-    width: 400px;
+    width: 365px;
     resize: vertical;
     
     border-width: 2.54px;
@@ -96,5 +96,30 @@ footer{
     background-color: #009929;
     text-align: center;
     padding: 30px;
+}
+
+/*Botones*/
+
+button{
+    padding: 7px;
+    margin: 5px;
+    width: 10em;
+    height: 5ex;
+    background-image: linear-gradient(135deg, #006414 40%, #98ff96);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: .5s transform;
+    cursor: pointer;
+}
+
+button:hover{
+    background-image: linear-gradient(135deg, #98ff96 40%,#006414);
+    transform: scale(1.1);
+}
+
+button:active{
+    box-shadow: 2px 2px 5px #0e7657;
 }
 
