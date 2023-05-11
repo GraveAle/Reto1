@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/Reto1/app.js"></script>
-    <link rel="stylesheet" href="/Reto1/assets/styles.css">
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/assets/styles.css">
     <title>Challenge</title>
 </head>
 <body>
     <header>
-        <img src="/Reto1/assets/images/img-header.png" alt="alura.jpg" width="200" height="90">
+        <img src="/assets/images/img-header.png" alt="alura.jpg" width="200" height="90">
 
         <nav>
             <ul">
@@ -25,9 +25,9 @@
     <main>
         <section class="contenedor">
             <div class="izq">
-                <textarea id="texto" cols="30" rows="10"></textarea>
-                <button class = "box" onclick='encriptarTexto()'>Encriptar</button>
-                <button class="box" onclick='copiarTexto()'>Copiar</button>   
+                <textarea id="desencriptado" cols="30" rows="10"></textarea>
+                <button id='btn-encripta' class= "box">Encriptar</button>
+                <button class= "box" onclick='copiarTexto()'>Copiar</button>   
             </div>
     
             <div class="center">
@@ -36,14 +36,14 @@
     
             <div class="der">
                 <textarea id="encriptado" cols="30" rows="10"></textarea>
-                <button class = "box"  onclick="desencriptarTexto()"> Desencriptar</button>
+                <button id="btn-desencripta" class = "box"> Desencriptar</button>
                 <button class="box" onclick='copiarTexto()'>Copiar</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <img src="/Reto1/assets/images/oracle.png" alt="ORACLE" width="300" height="50">
+        <img src="/assets/images/oracle.png" alt="ORACLE" width="300" height="50">
         <p></p>
     </footer>
 
