@@ -76,15 +76,31 @@ function limpiarTextoArea (limpia){
   document.getElementById(limpia).value = "";
 }   
 
-
-
 window.addEventListener('load', function(){
+
     function validarBoton(event) {
+
+        let desencriptado = document.getElementById("desencriptado").value;
+        let encriptado = document.getElementById("encriptado").value;
+        let noPermitido = /^[A-Za-z0-9\s]+$/;
+
         if (event.target.id === "btn-encripta") {
-            encriptarTexto();
-        } else if (event.target.id === "btn-desencripta") {
-            desencriptarTexto();
-        }
+            if (desencriptado == "") {
+              alert('No hay nada que encriptar');
+            } else if (!noPermitido.test(desencriptado)) {
+              alert('No se permiten caracteres especiales en el texto a encriptar');
+            } else {
+              encriptarTexto();
+            }
+          } else if (event.target.id === "btn-desencripta") {
+            if (encriptado == "") {
+              alert('No hay nada que desencriptar');
+            } else if (!noPermitido.test(encriptado)) {
+              alert('No se permiten caracteres especiales en el texto a desencriptar');
+            } else {
+              desencriptarTexto();
+            }
+          }
     }
 
     //Agregar funcion a cada boton
@@ -92,3 +108,24 @@ window.addEventListener('load', function(){
     document.getElementById("btn-desencripta").addEventListener("click", validarBoton);
 });
 
+function copiarTexto (middle){
+
+    let textoCopiado = document.getElementById(middle);
+
+    if (textoCopiado.value == ""){
+        alert('No hay nada que copiar')
+    } else {
+        textoCopiado.select();
+        textoCopiado.setSelectionRange(0, 99999);
+
+        navigator.clipboard.writeText(textoCopiado.value);
+        alert("Texto copiado: " + textoCopiado.value);
+    }
+
+    
+}
+
+function resetText(){ 
+    document.getElementById("desencriptado").value = "";
+    document.getElementById("encriptado").value = "";
+}
