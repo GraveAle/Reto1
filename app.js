@@ -1,6 +1,6 @@
 
-function encriptarTexto (encriptar){
-  var encriptar = document.getElementById('desencriptado').value;
+function encriptarTexto (){
+  let encriptar = document.getElementById('desencriptado').value;
   encriptar = encriptar.toLowerCase().split('');
   
   for (i = 0; i < encriptar.length; i ++){
@@ -32,9 +32,9 @@ function encriptarTexto (encriptar){
       limpiarTextoArea('desencriptado');
 }
 
-function desencriptarTexto(decodificar){
+function desencriptarTexto(){
         
-  var decodificar = document.getElementById('encriptado').value;
+  let decodificar = document.getElementById('encriptado').value;
   decodificar = decodificar.toLowerCase().split('');
 
   for (i = 0; i < decodificar.length; i++){
@@ -68,7 +68,7 @@ function desencriptarTexto(decodificar){
 
 //Mostrar texto codificado/decodificado
 function mostrarTexto(textarea,txt){
-  document.getElementById(textarea).innerHTML = txt;
+  document.getElementById(textarea).value = txt;
 }
 
 // Funciones para limpiar pantalla
@@ -80,12 +80,10 @@ function limpiarTextoArea (limpia){
 
 window.addEventListener('load', function(){
     function validarBoton(event) {
-        let textoEncriptado = "";
-        let textoDesencriptado = "";
         if (event.target.id === "btn-encripta") {
-            encriptarTexto(textoEncriptado);
+            encriptarTexto();
         } else if (event.target.id === "btn-desencripta") {
-            desencriptarTexto (textoDesencriptado);
+            desencriptarTexto();
         }
     }
 
