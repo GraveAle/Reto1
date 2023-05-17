@@ -123,3 +123,32 @@ button:active{
     box-shadow: 2px 2px 5px #0e7657;
 }
 
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .izq, .der, .center {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .center {
+        margin-top: 10px;
+    }
+}
+
